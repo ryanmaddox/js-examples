@@ -13,8 +13,8 @@ function draw(ctx, length, x, y, color) {
 }
 
 function random(min, max) {
-   let num = Math.floor(Math.random() * (max - min)) + min;
-   return num;
+  let num = Math.floor(Math.random() * (max - min)) + min;
+  return num;
 }
 
 function reportArea(length, listId) {

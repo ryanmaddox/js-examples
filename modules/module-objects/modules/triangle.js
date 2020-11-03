@@ -1,5 +1,10 @@
 const name = 'triangle';
 
+// my function I added
+function sayHi() {
+  console.log(this.name, 'says hi');
+}
+
 function degToRad(degrees) {
   return degrees * Math.PI / 180;
 };
@@ -10,8 +15,8 @@ function draw(ctx, length, x, y, color) {
   ctx.beginPath();
   ctx.moveTo(x, y);
   ctx.lineTo(x + length, y);
-  let triHeight = (length/2) * Math.tan(degToRad(60));
-  ctx.lineTo(x + (length/2), y + triHeight);
+  let triHeight = (length / 2) * Math.tan(degToRad(60));
+  ctx.lineTo(x + (length / 2), y + triHeight);
   ctx.lineTo(x, y);
   ctx.fill();
 
@@ -25,7 +30,7 @@ function draw(ctx, length, x, y, color) {
 
 function reportArea(length, listId) {
   let listItem = document.createElement('li');
-  listItem.textContent = `${name} area is ${Math.round((Math.sqrt(3)/4)*(length * length))}px squared.`
+  listItem.textContent = `${name} area is ${Math.round((Math.sqrt(3) / 4) * (length * length))}px squared.`
 
   let list = document.getElementById(listId);
   list.appendChild(listItem);

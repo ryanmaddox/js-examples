@@ -22,3 +22,7 @@ Circle.reportPerimeter(circle1.radius, reportList);
 let triangle1 = Triangle.draw(myCanvas.ctx, 100, 75, 190, 'yellow');
 Triangle.reportArea(triangle1.length, reportList);
 Triangle.reportPerimeter(triangle1.length, reportList);
+
+// my added code
+let myTriangle = new Triangle();
+myTriangle.sayHi();
